@@ -31,8 +31,9 @@
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding:28px 16px 60px;
+    padding:0 16px 60px;
   }
+  .tricolor{ margin-bottom:28px; }
 
   .letterhead{
     width:100%;
@@ -41,16 +42,15 @@
     margin-bottom:22px;
   }
   .crest{
-    width:52px;height:52px;
-    margin:0 auto 10px;
-    border:2px solid var(--line);
-    border-radius:50%;
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Space Grotesk',sans-serif;
-    font-weight:700;
-    font-size:15px;
-    background:var(--paper);
-    letter-spacing:-1px;
+    width:88px;height:88px;
+    margin:0 auto 14px;
+  }
+  .crest svg{ width:100%; height:100%; display:block; }
+  .tricolor{
+    height:3px;
+    width:100%;
+    background:linear-gradient(90deg, #d97a2b 0 33.3%, #f4efe4 33.3% 66.6%, #2f5d3a 66.6% 100%);
+    opacity:.8;
   }
   .letterhead .eyebrow{
     font-family:'JetBrains Mono',monospace;
@@ -271,10 +271,35 @@
 </style>
 </head>
 <body>
+  <div class="tricolor"></div>
 
   <div class="letterhead">
-    <div class="crest">ITI</div>
-    <div class="eyebrow">SSC Round 1 · 10 July 2026</div>
+    <div class="crest">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="arcTop" d="M 14,50 A 36,36 0 0 1 86,50" />
+        </defs>
+        <circle cx="50" cy="50" r="47" fill="#f4efe4" stroke="#1e2f43" stroke-width="2"/>
+        <circle cx="50" cy="50" r="39" fill="none" stroke="#9c7a3c" stroke-width="1" stroke-dasharray="2.5 2.5"/>
+        <text font-family="JetBrains Mono, monospace" font-size="6.3" font-weight="600" letter-spacing="1.5" fill="#3a5570">
+          <textPath href="#arcTop" startOffset="50%" text-anchor="middle">GOVERNMENT ITI</textPath>
+        </text>
+        <g transform="translate(50,56)">
+          <g transform="rotate(45)">
+            <rect x="-3.5" y="-24" width="7" height="48" rx="3.5" fill="#7a3b2e"/>
+            <rect x="-8" y="-24" width="16" height="10" rx="4" fill="#7a3b2e"/>
+            <rect x="-8" y="14" width="16" height="10" rx="4" fill="#7a3b2e"/>
+          </g>
+          <g transform="rotate(-45)">
+            <rect x="-3" y="-22" width="6" height="44" rx="3" fill="#1e2f43"/>
+            <polygon points="0,-27 -6,-19 6,-19" fill="#1e2f43"/>
+          </g>
+          <circle cx="0" cy="0" r="6" fill="#f4efe4" stroke="#1e2f43" stroke-width="1.6"/>
+        </g>
+        <text x="50" y="83" font-family="Noto Sans Gujarati, sans-serif" font-size="7" font-weight="700" letter-spacing=".5" fill="#1e2f43" text-anchor="middle">MANINAGAR</text>
+      </svg>
+    </div>
+    <div class="eyebrow">ITI Admission Round 1 · 10 July 2026</div>
     <h1>Government ITI Maninagar (Khokhra)<br>પ્રવેશ પરિણામ ચકાસો</h1>
     <p>તમારો Registration Number નાખો અને ફાળવેલ ટ્રેડ જુઓ</p>
   </div>
@@ -287,7 +312,7 @@
       <input id="regInput" type="text" inputmode="numeric" placeholder="દા.ત. 50877186" autocomplete="off">
       <button id="searchBtn">શોધો</button>
     </div>
-    <p class="hint">આ નંબર તમને SSC ITI Admission ફોર્મ ભરતી વખતે મળ્યો હતો.</p>
+    <p class="hint">આ નંબર તમને ITI Admission ફોર્મ ભરતી વખતે મળ્યો હતો.</p>
   </div>
 
   <div id="result"></div>
