@@ -355,7 +355,7 @@ function render(record, queried){
   }
   box.innerHTML = `
     <div class="ticket">
-      <div class="stamp-mark">ALLOTTED<br>ROUND&nbsp;2</div>
+      <div class="stamp-mark">ALLOTTED<br>ROUND&nbsp;${record.oldTrade && record.oldTrade === record.trade ? '1' : '2'}</div>
       <div class="ticket-top">
         <div class="field-row">
           <span class="field-label">REG. NO</span>
