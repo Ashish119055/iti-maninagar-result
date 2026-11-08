@@ -1,0 +1,12 @@
+# Stage 1 — word-level timing (Demucs vocal split, MMS_FA forced alignment, Whisper cross-check)
+torch
+torchaudio
+demucs
+uroman
+openai-whisper
+# Stage 2 — sync test video
+pillow
+numpy
+# Stage 3 — beat analysis
+librosa
+soundfile
